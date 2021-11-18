@@ -38,11 +38,20 @@ namespace LineCamparison
             lenghtSecond = Math.Sqrt(powx + powy);
             Console.WriteLine("Lenght of Second line is " + lenghtSecond);
 
-            if (lenghtFirst.Equals(lenghtSecond))
-                Console.WriteLine("Two lines are equal");
+            //if (lenghtFirst.Equals(lenghtSecond))
+            //    Console.WriteLine("Two lines are equal");
+            //else
+            //    Console.WriteLine("Lines are not equal");
+            
+            int compare= (lenghtFirst.CompareTo(lenghtSecond)) ;
+            if (compare > 0)
+                Console.WriteLine("lenght of first line is greater than second line");
+            else if (compare < 0)
+                Console.WriteLine("lenght of second line is greater than first line");
             else
-                Console.WriteLine("Lines are not equal");
+                Console.WriteLine("Both lines are equal");
             Console.ReadKey();
+
         }
     }
 }
